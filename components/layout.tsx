@@ -1,13 +1,13 @@
+//共通レイアウトのコンポーネント
 import React from "react";
 import { Header } from "./header";
 import { Footer } from "./footer";
-import { Container } from "./container";
 
-type LayoutType = {
+type LayoutPropsType = {
     children: React.ReactNode
 }
 
-export const Layout = (props:LayoutType) => {
+export const Layout = (props:LayoutPropsType) => {
     const {children} = props
     return (
         <>

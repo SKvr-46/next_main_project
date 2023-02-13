@@ -1,0 +1,32 @@
+.topwrapper {
+    margin-top: var(--space-xs);
+    width: 100%;
+    height: var(--topcontainer-height);
+    background-color: var(--gray-25);
+
+    & .containerwrapper {
+        display: flex;
+        flex-direction: row;
+        background: var(--gray-25);
+        width: 92%;
+        max-width: 1280px;
+        height: 100%;
+        margin: 0 auto;
+
+        & .title {
+            text-align: center;
+            width: 100%;
+            font-weight: 900;
+            margin-top: 10%;
+            display: inline-block;
+            font-size: var(--heading1);
+        }
+    }
+    
+}
+
+@media (min-width: 768px) {
+    .title > * + * {
+        margin-top: var(--space-xs);
+    }
+}

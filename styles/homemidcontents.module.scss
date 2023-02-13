@@ -1,0 +1,185 @@
+.gridContainer {
+    margin-top: var(--space-sm);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: var(--space-xs);
+    text-align: center;
+    
+
+    & .area_1 {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        height: 30vh;
+        width: 100%;
+
+        //項目を中央ぞろえに
+        display: grid;
+        place-items: center;
+
+        & a{
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: var(--heading1);
+            text-decoration: none;
+            filter: drop-shadow(0px 0px 20px var(--gray-75));
+            
+            &::after {
+                position: absolute;
+                transform: translateY(var(--heading1));
+                content: "";
+                display: block;
+                height: 3px;
+                width: 100%;
+                background-color: currentColor;
+
+                //animation
+                transition: 0.4s;
+                transition-delay: 0.2s;
+            }
+
+            &::before {
+                position: absolute;
+                display: grid;
+                place-items: center;
+                content: "Go To This Page";
+                font-size: var(--heading2);
+                height: calc(1.8 * var(--gear-radius));
+                width: calc(1.8 * var(--gear-radius));
+                border-radius: 100%;
+                background-color: aqua;
+
+                //animation
+                transition: 0.7s;
+                transition-delay: 0.2s;
+                opacity: 0;
+            }
+
+
+
+        }
+
+    }
+
+    & .area_2 {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        height: 30vh;
+        width: auto;
+
+        //項目を中央ぞろえに
+        display: grid;
+        place-items: center;
+
+        & a {
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: var(--heading1);
+            text-decoration: none;
+            filter: drop-shadow(0px 0px 20px var(--gray-75));
+
+            &::after {
+                position: absolute;
+                transform: translateY(var(--heading1));
+                content: "";
+                display: block;
+                height: 3px;
+                width: 100%;
+                background-color: currentColor;
+
+                //animation
+                transition: 0.4s;
+                transition-delay: 0.2s;
+            }
+
+            &::before {
+                position: absolute;
+                display: grid;
+                place-items: center;
+                content: "Go To This Page";
+                font-size: var(--heading2);
+                height: calc(1.8 * var(--gear-radius));
+                width: calc(1.8 * var(--gear-radius));
+                border-radius: 100%;
+                background-color: aqua;
+
+                //animation
+                transition: 0.7s;
+                transition-delay: 0.2s;
+                opacity: 0;
+            }
+        }
+
+    }
+
+}
+
+
+@media (hover: hover) {
+    .area_1{
+
+        & a {
+            transition: 0.2s ;
+
+            &:hover{ 
+                filter: drop-shadow(0px 0px 50px gold);
+                transform: scale(1.4);
+            }
+
+            &:hover::after {
+                transform: translateY(calc(var(--heading2))) rotate(180deg);
+                color: black;
+                opacity: 0.4;
+            }
+
+            &:hover::before {
+                opacity: 1;
+            }
+
+
+
+    }
+    }
+
+    .area_2{
+
+        & a {
+            transition: 0.2s ;
+
+
+            &:hover{ 
+                filter: drop-shadow(0px 0px 50px aquamarine);
+                transform: scale(1.4);
+            }
+
+            &:hover::after {
+                transform: translateY(calc(var(--heading2))) rotate(180deg);
+                color: black;
+                opacity: 0.4;
+            }
+
+            &:hover::before {
+                opacity: 1;
+            }
+
+    }
+    }
+}
+
+@media (hover: none) {
+    .area_1,
+    .area_2 {
+
+        & a {
+            -webkit-tap-highlight-color: transparent;
+
+            &:active {
+                transform: scale(1.4);
+            }
+        }
+    }
+}

@@ -6,29 +6,51 @@
   --gray-75: #444444;
   --black: #000000;
   --purple: #7352c7;
+  --orange: rgba(253,112,19,1);
+  --aqua: #00ffff;
 
-  --body: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
-  --display: clamp(4.5rem, 1.82rem + 11.34vw, 10rem);
-  --heading1: calc(2rem, 1.3rem + 3vw, 4rem);
-  --heading2: calc(var(--body) * 1.5);
-  --heading3: calc(var(--body) * 1.2);
-  --small-heading2: clamp(0.875rem, 4vw - 1rem, 1.6875rem);
-  --small-heading3: clamp(var(--body) * 0.86);
+  /**16pxがhtml基本サイズ*/
 
-  --space-xs: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
-  --space-sm: calc(var(--space-xs) * 1.5);
-  --space-md: calc(var(--space-xs) * 2);
-  --space-lg: calc(var(--space-xs) * 3);
-  --space-xl: calc(var(--space-xs) * 4);
-  --space-jump: clamp(1.25rem, 0.35rem + 3.8vw, 3.75rem);
+  --body: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);  /**16-18px*/
+  --display: clamp(4.5rem, 1.82rem + 11.34vw, 10rem);  /**72-160px*/
+  --heading1: clamp(2rem, 1.3rem + 3vw, 4rem); /**32-64px*/
+  --heading2: calc(var(--body) * 1.5);  /**24-27px*/
+  --heading3: calc(var(--body) * 1.2);  /**19.2-21.6px*/
+  --small-heading2: clamp(0.875rem, 4vw - 1rem, 1.6875rem); /**14-27px*/
+  --small-heading3: clamp(var(--body) * 0.86);  /**12-23px*/
+
+  --space-xs: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);  /**20-30px*/
+  --space-sm: calc(var(--space-xs) * 1.5);  /**30-45px*/
+  --space-md: calc(var(--space-xs) * 2);  /**40-60px*/
+  --space-lg: calc(var(--space-xs) * 3);  /**60-90px*/
+  --space-xl: calc(var(--space-xs) * 4);  /**80-120px*/
+  --space-jump: clamp(1.25rem, 0.35rem + 3.8vw, 3.75rem); /**20-60px*/
+
+
+  /*topcontainerの縦の長さ調整*/
+  --topcontainer-height: calc(var(--space-md) * 10);/**400-600px*/
+
+
+  /*歯車位置の設定用*/
+  --gear-radius: clamp(6.25rem, 20vw ,12.5rem);/**100-200px*/
+  --gear-width: calc(var(--gear-radius) * 0.3); //60px基準
+  --gear-height: calc(var(--gear-radius) * 1.2);  //240px
+  --gear-outer-black: calc(var(--gear-radius) * 0.7); //140px基準
+  --gear-black-circle:  calc(var(--gear-radius) * 0.65); //130px基準
+  --gear-black-center:  calc(var(--gear-radius) * 0.35); //130px基準
+  --spread-gear-b: calc(var(--gear-radius) * 1.25);  //3つ目の歯車のleft
+  --spread-gear-b2: calc(var(--gear-radius) * 1.25);  //2つ目の歯車のtop
+  --spread-gear-area2: calc((var(--gear-radius) * 0.6));  //2つ目の歯車のleft
+  
 }
 
 body {
   color: var(--black);
-  background:var(--gray-10);
+  background: #dcdbdb;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: var(--body);
 }
+
 
 h1 {
   font-size: var(--heading1);
@@ -54,7 +76,6 @@ body, h1, h2, h3, p, figure, ul {  /*主要要素のマージン、パディン�
 
 a {                           /*リンクの色を親要素に揃える。*/
   color: inherit;
-  text-decoration: none;
 }
 
 span > img {  /*span直下のimgについての制御。next/Imageは、spanでマークアップされているので、これはImage/nextでの画像に適用される。*/

@@ -1,3 +1,4 @@
+//ヘッダーコンポーネント
 import React from "react";
 import styles from "styles/header.module.scss"
 import { Container } from "./container";
@@ -6,11 +7,13 @@ import { Nav } from "./nav";
 
 export const Header = () => {
     return (
-        <Container>
-            <div className={styles.flexContainer}>
-                <Logo />
-                <Nav/>
-            </div>
-        </Container>
+        <header className={styles.head}>
+            <Container>
+                <div className={styles.flexContainer}>
+                    <Logo logoIsBox/>
+                    <Nav/>
+                </div>
+            </Container>
+        </header>
     )
 }

@@ -1,0 +1,223 @@
+@keyframes rotate_gear_1{
+
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate_gear_2{
+
+    0%{
+        transform: rotate(360deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.gear_1 {  //最大円
+    position: relative;
+    width: var(--gear-radius);
+    height: var(--gear-radius);
+    background: gray;
+    border-radius: 100%;
+    animation: 8s linear infinite rotate_gear_1;
+    border: 2px solid black;
+    filter: drop-shadow(0 0 10px aqua);
+
+    & .bar_1 {
+        position: absolute;
+        display: block;
+        top: -10%;
+        left: 35%;
+        width: var(--gear-width);
+        height: var(--gear-height);
+        background-color: gray;
+        border: 1px solid black;
+    }
+
+    & .bar_2 {
+        position: absolute;
+        display: block;
+        transform: rotate(45deg);
+        top: -10%;
+        left: 35%;
+        width: var(--gear-width);
+        height: var(--gear-height);
+        background-color: gray;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+    & .bar_3 {
+        position: absolute;
+        display: block;
+        transform: rotate(90deg);
+        top: -10%;
+        left: 35%;
+        width: var(--gear-width);
+        height: var(--gear-height);
+        background-color: gray;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+    & .bar_4 {
+        position: absolute;
+        display: block;
+        transform: rotate(135deg);
+        width: var(--gear-width);
+        height: var(--gear-height);
+        top: -10%;
+        left: 35%;
+        background-color: gray;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+    &::after {  //黒丸(外側)
+        content: "";
+        position: absolute;
+        display: block;
+        top: 15%;
+        left: 15%;
+        width: var(--gear-outer-black);
+        height: var( --gear-outer-black);
+        background-color: black;
+        border-radius: 100%;
+
+    }
+
+    & .circle {  //黒丸(外側)
+        position: absolute;
+        top: 17.5%;
+        left: 17.5%;
+        background-color: gray;
+        width: var(--gear-black-circle);
+        height: var(--gear-black-circle);
+        border-radius: 100%;
+        z-index: 2;
+
+        &::after {  //中央の黒丸
+            content: "";
+            position: absolute;
+            display: block;
+            top: 24%;
+            left: 24%;
+            width: var(--gear-black-center);
+            height: var(--gear-black-center);
+            background-color: black;
+            border-radius: 100%;
+            z-index: 3;
+            opacity: 0.6;
+        }
+    }
+
+
+    
+}
+.gear_2 {  //最大円
+    position: relative;
+    width: var(--gear-radius);
+    height: var(--gear-radius);
+    background: gray;
+    border-radius: 100%;
+    animation: 8s linear infinite rotate_gear_2;
+    border: 2px solid black;
+    filter: drop-shadow(0 0 10px aqua);
+
+    & .bar_1 {
+        position: absolute;
+        display: block;
+        top: -10%;
+        left: 35%;
+        width: var(--gear-width);
+        height: var(--gear-height);
+        background-color: gray;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        border: 1px solid black;
+    }
+
+    & .bar_2 {
+        position: absolute;
+        display: block;
+        transform: rotate(45deg);
+        top: -10%;
+        left: 35%;
+        width: var(--gear-width);
+        height: var(--gear-height);
+        background-color: gray;
+    }
+
+    & .bar_3 {
+        position: absolute;
+        display: block;
+        transform: rotate(90deg);
+        top: -10%;
+        left: 35%;
+        width: var(--gear-width);
+        height: var(--gear-height);
+        background-color: gray;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        
+    }
+
+    & .bar_4 {
+        position: absolute;
+        display: block;
+        transform: rotate(135deg);
+        width: var(--gear-width);
+        height: var(--gear-height);
+        top: -10%;
+        left: 35%;
+        background-color: gray;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+    &::after {  //黒丸(外側)
+        content: "";
+        position: absolute;
+        display: block;
+        top: 15%;
+        left: 15%;
+        width: var(--gear-outer-black);
+        height: var( --gear-outer-black);
+        background-color: black;
+        border-radius: 100%;
+
+    }
+
+    & .circle {  //灰色(外側の黒丸のみ残す)
+        position: absolute;
+        top: 17.5%;
+        left: 17.5%;
+        background-color: gray;
+        width: var(--gear-black-circle);
+        height: var(--gear-black-circle);
+        border-radius: 100%;
+        z-index: 2;
+
+        &::after {  //中央の黒丸
+            content: "";
+            position: absolute;
+            display: block;
+            top: 24%;
+            left: 24%;
+            width: var(--gear-black-center);
+            height: var(--gear-black-center);
+            background-color: rgb(130, 52,3);
+            border-radius: 100%;
+            z-index: 3;
+            opacity: 0.6;
+        }
+    }
+    
+}

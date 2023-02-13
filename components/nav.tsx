@@ -1,3 +1,4 @@
+//ナビゲーション　コンポーネント
 import React from "react";
 import Link from "next/link";
 import styles from "styles/nav.module.scss"
@@ -16,7 +17,9 @@ export const Nav = () => {
 
     return (
         <nav className={menuIsOpen ? styles.open : styles.close}>
-            <button onClick={toggleMenu} className={styles.btn}>MENU</button>
+            <button onClick={toggleMenu} className={styles.btn}>
+                <span className={styles.bar}></span>
+            </button>
             <ul className={styles.list}>
                 <li>
                     <Link href="/" onClick={closeMenu}>HOME</Link>

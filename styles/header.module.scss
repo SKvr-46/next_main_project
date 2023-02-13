@@ -1,3 +1,26 @@
+@keyframes bggradient{
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+    }
+
+
+.head {
+    height: auto;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background: linear-gradient(-45deg, var(--gray-10), var(--gray-50) 50% ,var(--gray-10));
+    background-size: 200% 200%;
+    animation: bggradient 7s ease-in-out infinite;
+    overflow: hidden;
+}
 
 .flexContainer {
     composes: spaceBetween from "/styles/utils.module.scss"
