@@ -71,4 +71,30 @@
     
     @media (hover: none) {
 
+        .outer {
+
+            &:active {
+                width: 100%;
+                height: calc(3 * var(--gear-radius));
+                border-radius: 0%;
+
+                & .title {
+                    position: absolute;
+                    font-weight: bold;
+                    font-size: var(--heading1);
+                    transition: 0.4s;
+                    transform: scale(0);
+        
+                }
+        
+                & .subtitle {
+                    position: absolute;
+                    font-size: var(--heading2);
+                    font-weight: 600;
+                    transition: 0.4s;
+                    transform: scale(1);
+                }
+            }
+        }
+
     }
