@@ -1,19 +1,24 @@
 import React from "react";
 import { Container } from "@/components/container";
-import { HomeTopContent } from "@/components/hometopcontent";
+import { PageTopContent } from "@/components/pagetopcontent";
 import { HomeMidContents } from "@/components/homemidcontents";
 import { GearWrapper } from "@/components/gearwrapper";
+import { GetStaticProps } from 'next'
 import { Meta } from "@/components/meta";
+import { NextPage } from "next";
 
-const Home = () => {
+const Home:NextPage = () => {
     
     return(
         <>
             <Meta pageTitle={"HOME"} pageDesc={"研究部屋αのホームページ"}/>
-
-            <HomeTopContent title={"HOME"}>
+            <PageTopContent
+            title_1={"Welcome to"} 
+            title_2={"My"}
+            title_3={"HOME Page!"}
+            >
                 <GearWrapper/>
-            </HomeTopContent>
+            </PageTopContent>
             <Container>
                 <HomeMidContents/>
             </Container>
@@ -24,10 +29,8 @@ const Home = () => {
 export default Home
 
 
-export const getStaticProps = async () => {
+export const getStaticProps:GetStaticProps = async () => {
     return {       
-        props : {
-
-        }
+        props : {}
     }
 }

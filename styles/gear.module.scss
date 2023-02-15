@@ -121,6 +121,29 @@
 
     
 }
+
+@keyframes shadow_style{
+    0% {
+        filter: drop-shadow(0 0 10px aqua);
+    }
+
+    25% {
+        filter: drop-shadow(0 0 30px gold);
+    }
+    50% {
+        filter: drop-shadow(0 0 50px crimson);
+    }
+
+    75% {
+        filter: drop-shadow(0 0 30px plum);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 10px aqua);
+    }
+
+}
+
 .gear_2 {  //最大円
     position: relative;
     width: var(--gear-radius);
@@ -129,7 +152,7 @@
     border-radius: 100%;
     animation: 8s linear infinite rotate_gear_2;
     border: 2px solid black;
-    filter: drop-shadow(0 0 10px aqua);
+    filter: drop-shadow(0 0 20px aquamarine) brightness(1.2);
 
     & .bar_1 {
         position: absolute;
