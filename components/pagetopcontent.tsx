@@ -1,5 +1,5 @@
+//ページトップのコンポーネント
 import styles from "styles/pagetopcontent.module.scss"
-
 
 type TopContentPropsType = {
     children: React.ReactNode
