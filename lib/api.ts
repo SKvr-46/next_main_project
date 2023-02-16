@@ -5,11 +5,41 @@ export const client = createClient({
     apiKey: process.env.API_KEY || "",
 })
 
+//blogのプロパティ
 export type BlogContentType = {
-    slug :string | number | string[]
+    slug :string 
     title: string
-    publish: string | number
+    publishDate: string 
     content: string 
-    eyecatch?: string
-    categories?: string
+}
+
+//slugで記事を抽出する
+export const getPostBySlug = async (slug: string ) => {
+    try {
+        const posts = await client.get({
+            endpoint: "blogs",
+            queries: {filters: `slug[equals]${slug}`}
+        })
+        return posts.contents[0]
+
+    } catch (err) {
+        console.log("--getPostBySlug")
+        console.log(err)
+    }
+}
+
+
+
+export const getAllPost = async (limit = 100) => {
+    try {
+        const posts = await client.get({
+            endpoint: "blogs",
+            queries: {orders: "-publishDate", limit: limit}
+        })
+        return posts.contents
+
+    } catch (err) {
+        console.log("--getAllPost")
+        console.log(err)
+    }
 }

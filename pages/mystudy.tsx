@@ -1,9 +1,10 @@
 import React from "react";
 import { Meta } from "@/components/meta";
-import { GetServerSideProps, NextPage } from "next";
 import { Container } from "@/components/container";
 import { PageTopContent } from "@/components/pagetopcontent";
 import { GearWrapper } from "@/components/gearwrapper";
+import styles from "styles/mystudy.module.scss"
+import { getAllPost } from "@/lib/api";
 
 import { client } from "@/lib/api";
 import { BlogContentType } from "@/lib/api";
@@ -21,9 +22,10 @@ const MyStudy = ({post} :{post:BlogContentType[]}) => {
             >
                 <GearWrapper/>
             </PageTopContent>
+            
             <Container>
                 <div>
-                    <ul>
+                    <ul className={styles.list}>
                         {post.map((blog) => (
                             <li key={blog.title}>
                                 <Link href={`/blog/${blog.slug}`}>
@@ -42,18 +44,19 @@ export default MyStudy
 
 
 export const getStaticProps = async () => {
-    try {
-        const posts = await client.get({
-            endpoint: "blogs"
-        })
-
+    // try {
+    //     const posts = await client.get({
+    //         endpoint: "blogs",
+    //     })
+        const posts = await getAllPost()
         return {
             props:{
-                post: posts.contents,
+                post: posts,
             },
         }
-    } catch(err) {
-        console.log("--getStaticProps--")
-        console.log(err)
-    }
+    // } catch(err) {
+    //     console.log("--getStaticProps--")
+    //     console.log(err)
+    // }
+
 }

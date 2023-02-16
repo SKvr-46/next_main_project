@@ -1,40 +1,34 @@
 import { GetStaticPaths, GetStaticProps} from "next";
 import { client } from "@/lib/api";
 import { BlogContentType } from "@/lib/api";
-import { ParsedUrlQuery } from "querystring";
+import { getPostBySlug } from "@/lib/api";
+import { Container } from "@/components/container";
+import styles from "styles/post.module.scss"
+import { Meta } from "@/components/meta";
 
 
-export const BlogPage = (blog: BlogContentType) => {
+
+export const BlogPage = ({blog} :{blog: BlogContentType}) => {
+
     return (
-        <div>
-            <h1>{blog.title}</h1>
-            <h1>{blog.publish}</h1>
-            <div
-            dangerouslySetInnerHTML={{
-            __html: `${blog.content}`,
-            }}
-            />
-        </div>
+        <Container>
+            <Meta pageTitle={blog.title} pageDesc={"研究紹介のページ"}/>
+            <div className={styles.postcontainer}>
+                <h1 className={styles.title}>{blog.title}</h1>
+                <h2 className={styles.publish}>{blog.publishDate}</h2>
+                <div
+                dangerouslySetInnerHTML={{
+                __html: `${blog.content}`,
+                }}
+                className={styles.content}
+                />
+            </div>
+        </Container>
     )
 }
 export default BlogPage
 
 
-
-//slugで記事を抽出する
-export const getPostBySlug = async (slug: string ) => {
-    try {
-        const post = await client.get({
-            endpoint: "blogs",
-            queries: {filters: `slug[equals]${slug}`}
-        })
-        return post.contents[0]
-
-    } catch (err) {
-        console.log("--getPostBySlug")
-        console.log(err)
-    }
-}
 
 // APIリクエストを行うパスを指定（getstaticpropsより先に実行）
 export const getStaticPaths:GetStaticPaths = async () => {
@@ -49,11 +43,11 @@ export const getStaticPaths:GetStaticPaths = async () => {
 
 }
 
-// microCMSへAPIリクエスト
+// microCMSへAPIリクエスト(contextにはgetStaticPathsのpathsが入っている)
 export const getStaticProps:GetStaticProps = async (context) => {
 
     const slug = context.params?.slug as string
-    const post = await getPostBySlug(slug)
+    const post = await getPostBySlug(slug) //posts.contents[0]
 
     return {
         props: {

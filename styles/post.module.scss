@@ -1,0 +1,10 @@
+.postcontainer > * + * {
+    margin-bottom: var(--space-xs);
+}
+
+.postcontainer {
+    & .title {
+        margin-top: var(--space-xs);
+    
+    }
+}
