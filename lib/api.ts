@@ -13,7 +13,7 @@ export type BlogContentType = {
     content: string 
 }
 
-//slugで記事を抽出する
+//slugで特定の記事を返す
 export const getPostBySlug = async (slug: string ) => {
     try {
         const posts = await client.get({
@@ -29,7 +29,7 @@ export const getPostBySlug = async (slug: string ) => {
 }
 
 
-
+//デフォルト値(limit = 10)を変更して、100個の記事を返す
 export const getAllPost = async (limit = 100) => {
     try {
         const posts = await client.get({

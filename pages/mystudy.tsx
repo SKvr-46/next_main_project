@@ -10,7 +10,7 @@ import { client } from "@/lib/api";
 import { BlogContentType } from "@/lib/api";
 import Link from "next/link";
 
-
+//My Studyのページ全体
 const MyStudy = ({post} :{post:BlogContentType[]}) => {
     return (
         <>
@@ -43,20 +43,13 @@ const MyStudy = ({post} :{post:BlogContentType[]}) => {
 export default MyStudy
 
 
+//100個の記事を渡す
 export const getStaticProps = async () => {
-    // try {
-    //     const posts = await client.get({
-    //         endpoint: "blogs",
-    //     })
+
         const posts = await getAllPost()
         return {
             props:{
                 post: posts,
             },
         }
-    // } catch(err) {
-    //     console.log("--getStaticProps--")
-    //     console.log(err)
-    // }
-
 }

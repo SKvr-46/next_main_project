@@ -1,4 +1,4 @@
-import { GetStaticPaths, GetStaticProps} from "next";
+import { GetStaticPaths, GetStaticProps, NextPage} from "next";
 import { client } from "@/lib/api";
 import { BlogContentType } from "@/lib/api";
 import { getPostBySlug } from "@/lib/api";
@@ -7,9 +7,8 @@ import styles from "styles/post.module.scss"
 import { Meta } from "@/components/meta";
 
 
-
+//記事を表示するコンポーネント
 export const BlogPage = ({blog} :{blog: BlogContentType}) => {
-
     return (
         <Container>
             <Meta pageTitle={blog.title} pageDesc={"研究紹介のページ"}/>
