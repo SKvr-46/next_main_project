@@ -8,7 +8,7 @@ import { Meta } from "@/components/meta";
 import { NextPage } from "next";
 
 const Home:NextPage = () => {
-    
+
     return(
         <>
             <Meta pageTitle={"HOME"} pageDesc={"研究部屋αのホームページ"}/>

@@ -5,10 +5,9 @@ import { PageTopContent } from "@/components/pagetopcontent";
 import { GearWrapper } from "@/components/gearwrapper";
 import styles from "styles/mystudy.module.scss"
 import { getAllPost } from "@/lib/api";
-
-import { client } from "@/lib/api";
 import { BlogContentType } from "@/lib/api";
 import Link from "next/link";
+import { Accordion } from "@/components/accordion";
 
 //My Studyのページ全体
 const MyStudy = ({post} :{post:BlogContentType[]}) => {
@@ -22,8 +21,8 @@ const MyStudy = ({post} :{post:BlogContentType[]}) => {
             >
                 <GearWrapper/>
             </PageTopContent>
-            
             <Container>
+            <Accordion/>
                 <div>
                     <ul className={styles.list}>
                         {post.map((blog) => (
