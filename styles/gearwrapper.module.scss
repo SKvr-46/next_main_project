@@ -77,75 +77,46 @@
 
 
 @media (max-width:767px) {
-        .gearwrapper {
-            position: relative;
-            width: 100%;
-            height: 100%;
-    
-            & .geararea_1 {
-                transform: scale(0);
-            }
-    
-            & .geararea_2 {
-                transform: scale(0);
-            }
-    
-            & .geararea_3 {
-                transform: scale(0);
-            }
-        }
-    
-    
-        .propeller_bar{
-            position: relative;
-            background-color: var(--gray-50);
-            width: 20px;  
-            height: 200px; 
-            top: 50%;
-            left: 150px;
-            border-radius: 20% 20% 20% 20%;
-            border: 1px solid black;
-            filter: drop-shadow(0 0 10px aquamarine);
-        }
-    
-        .propeller_1 {
+    .gearwrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+
+        & .geararea_1 {
             position: absolute;
-            width: 30px;
-            height: 300px;
-            top: calc(50% - 150px);  //50% - プロペラの半分の長さ
-            left: 145px;
-            background-color: var(--gray-75);
-            border-radius: 100%;
-            animation: 3s linear infinite rotate_propeller;
-            opacity: 0.8;
-            filter: drop-shadow(0 0 20px aqua);
-
-            &::after {
-                position: absolute;
-                content: "";
-                width: 20px;
-                height: 20px;
-                top: 140px;
-                left: 5px;
-                background-color: var(--black);
-                border-radius: 100%;
-                filter: drop-shadow(0 0 5px white);
-            }
-    
-    
-            &::before {
-                position: absolute;
-                content: "";
-                width: 30px;
-                height: 300px;
-                transform: rotate(90deg);
-                background-color: var(--gray-75);
-                border-radius: 100%;
-            }
-    
+            left: 5%;  //基準位置 5%は、width92%に合わせてはみ出ないように
+            top: 5vh;   //基準位置
         }
-    
+
+        & .geararea_2 {
+            position: absolute;
+            left: calc(var(--spread-gear-area2) + 5%);
+            top: var(--spread-gear-b2);
+        }
+
+        & .geararea_3 {
+            position: absolute;
+            left: calc(var(--spread-gear-b) + 5%);
+            top: 5vh;
+        }
+    }
 
 
+    .propeller_bar{
+        transform: scale(0);
+    }
+
+    .propeller_1 {
+        transform: scale(0);
+
+
+        &::before {
+            transform: scale(0);
+        }
+
+    }
 }
 
+
+    
