@@ -35,7 +35,7 @@
 
 @media (max-width: 767px) {
     .title {
-        transform: translateY(calc(var(--gear-radius) * 1.2));
+        transform: translateY(calc(var(--gear-radius) * 1));
     }
     .title > * + * {
         margin-top: var(--space-xs);
