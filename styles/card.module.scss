@@ -35,6 +35,7 @@
             color: var(--white);
             transition: 0.4s;
             animation: 10s linear infinite shadow_style;
+            overflow: hidden;
     
     
             & .title {
@@ -56,7 +57,7 @@
                 
 
                 & li {
-                    margin-top: var(--space-md);  //bottomだと、下のセレクタだ上を押す形になるので、上にズレる。
+                    margin-top: var(--space-xs);  //bottomだと、下のセレクタだ上を押す形になるので、上にズレる。
                 }
             }
     
