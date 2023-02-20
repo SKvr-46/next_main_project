@@ -31,3 +31,13 @@
         margin-top: var(--space-xs);
     }
 }
+
+
+@media (max-width: 767px) {
+    .title {
+        transform: translateY(calc(var(--gear-radius) * 1.2));
+    }
+    .title > * + * {
+        margin-top: var(--space-xs);
+    }
+}
