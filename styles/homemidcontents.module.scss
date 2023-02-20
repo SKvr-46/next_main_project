@@ -178,7 +178,8 @@
             -webkit-tap-highlight-color: transparent;
 
             &:active {
-                transform: scale(1.4);
+                transform: scale(1);
+                color: var(--aqua);
             }
         }
     }
