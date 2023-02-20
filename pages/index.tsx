@@ -11,7 +11,7 @@ const Home:NextPage = () => {
 
     return(
         <>
-            <Meta pageTitle={"HOME"} pageDesc={"研究部屋αのホームページ"}/>
+            <Meta pageTitle={"HOME"} pageDesc={"研究部屋βのホームページ"}/>
             <PageTopContent
             title_1={"Welcome to"} 
             title_2={"My"}
