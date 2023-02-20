@@ -48,7 +48,7 @@
     
             & .subtitle {
                 position: absolute;
-                font-size: var(--heading2);
+                font-size: var(--body);
                 padding: var(--space-md);  //広がった時に、文字が一番端にこないように間をあける。
                 font-weight: bold;
                 transform: scale(0);  
