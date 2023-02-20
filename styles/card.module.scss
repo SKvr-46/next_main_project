@@ -99,9 +99,9 @@
     
     @media (hover: none) {
 
-        .outer {
+        .cardwrapper:active  {
 
-            &:active {
+            & .outer {
                 width: 100%;
                 height: calc(3 * var(--gear-radius));
                 border-radius: 0%;

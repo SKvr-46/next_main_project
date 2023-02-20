@@ -22,6 +22,8 @@ export const Card = (props:CardPropstype) => {
         backgroundcolor, 
         color 
         } = props
+
+
         
     return (
         <div className={styles.cardwrapper}>
