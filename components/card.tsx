@@ -1,12 +1,13 @@
+import { ReactNode } from "react";
 import styles from "styles/card.module.scss"
 
 type CardPropstype = {
     title: string
-    subtitle_1: string
-    subtitle_2?: string
-    subtitle_3?: string
-    subtitle_4?: string
-    subtitle_5?: string
+    subtitle_1: ReactNode
+    subtitle_2?: ReactNode
+    subtitle_3?: ReactNode
+    subtitle_4?: ReactNode
+    subtitle_5?: ReactNode
     backgroundcolor:string
     color:string
 }

@@ -18,6 +18,9 @@ const About:NextPage = () => {
     const skills_4 = "その他の言語(触ったことがある程度)： PHP Ruby Java"
     const personal_1 = "-----趣味-----"
     const personal_2 = "チェス、数学、トレーニング"
+    const production_1 = "-----制作物-----"
+    const production_2 = "https://next-game-6q37.vercel.app/"
+    const production_3 = "https://gentle-quokka-bd2bd5.netlify.app"
     return (
         <>
             <Meta pageTitle={"About Me"} pageDesc={"研究部屋αの管理人のページ"}/>
@@ -51,6 +54,21 @@ const About:NextPage = () => {
                 subtitle_1={personal_1} 
                 subtitle_2={personal_2} 
                 backgroundcolor={"#20b2aa"} 
+                color={"black"}/>
+                <Card 
+                title={"Production"} 
+                subtitle_1={production_1} 
+                subtitle_2={
+                <a href={production_2.toString()} target="_blank" rel="noopener noreferrer">
+                        {production_2.toString()}
+                </a>
+                } 
+                subtitle_3={
+                <a href={production_3.toString()} target="_blank" rel="noopener noreferrer">
+                        {production_3.toString()}
+                </a>
+                }
+                backgroundcolor={"#daa520"} 
                 color={"black"}/>
             </Container>
         </>
