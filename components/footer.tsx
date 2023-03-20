@@ -12,7 +12,7 @@ export const Footer = () => {
             <Container>
                 <Logo logoIsBox={false}/>
                 <address>koeich4@gmail.com</address>
-                <a href="https://github.com/SKvr-46/next-main-project" className={styles.link}>
+                <a href="https://github.com/SKvr-46" className={styles.link}>
                     <FontAwesomeIcon icon={faGithub}/>
                     <span className="sr-only">Github</span>
                 </a>
