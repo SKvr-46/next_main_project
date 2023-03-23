@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "styles/about.module.scss"
 import { Container } from "@/components/container";
 import { Card } from "@/components/card";
 import { Meta } from "@/components/meta";
@@ -60,17 +61,26 @@ const About:NextPage = () => {
                 title={"Production"} 
                 content_title={production__content_title} 
                 subtitle_1={
-                <a href={production_1.toString()} target="_blank" rel="noopener noreferrer">
+                <a 
+                href={production_1.toString()} target="_blank" rel="noopener noreferrer"
+                className={styles.link}
+                >
                         Next.js/React: <br/> {production_1.toString()}
                 </a>
                 } 
                 subtitle_2={
-                <a href={production_2.toString()} target="_blank" rel="noopener noreferrer">
+                <a 
+                href={production_2.toString()} target="_blank" rel="noopener noreferrer"
+                className={styles.link}
+                >
                         Vue3: <br/>{production_2.toString()}
                 </a>
                 }
                 subtitle_3={
-                    <a href={production_3.toString()} target="_blank" rel="noopener noreferrer">
+                    <a 
+                    href={production_3.toString()} target="_blank" rel="noopener noreferrer"
+                    className={styles.link}
+                    >
                             Github: <br/>{production_3.toString()}
                     </a>
                     }

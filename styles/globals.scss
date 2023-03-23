@@ -76,12 +76,6 @@ body, h1, h2, h3, p, figure, ul {  /*主要要素のマージン、パディン�
 
 a {                           /*リンクの色を親要素に揃える。*/
   color: inherit;
-  text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-        text-decoration-color: rgba(0, 0, 0, 0.6);
-    }
 }
 
 span > img {  /*span直下のimgについての制御。next/Imageは、spanでマークアップされているので、これはImage/nextでの画像に適用される。*/
