@@ -8,19 +8,20 @@ import { GetStaticProps, NextPage } from "next";
 
 
 const About:NextPage = () => {
-    const background_1 ="-----学歴-----"
-    const background_2 ="クラーク記念国際高等学校 卒"
-    const background_3 = "明治大学 総合数理学部 卒 （位相幾何学）"
-    const background_4 = "東京大学大学院 地球惑星科学専攻 （地震学）"
-    const skills_1 = "-----使用言語など-----"
-    const skills_2 = "研究： Python Fortran C"
-    const skills_3 = "WEB： HTML CSS Javascript Typescript React/Next.js Vue3"
-    const skills_4 = "その他の言語(触ったことがある程度)： PHP Ruby Java"
-    const personal_1 = "-----趣味-----"
-    const personal_2 = "チェス、数学、トレーニング"
-    const production_1 = "-----制作物-----"
-    const production_2 = "https://next-game-6q37.vercel.app/"
-    const production_3 = "https://gentle-quokka-bd2bd5.netlify.app"
+    const background_content_title = "-----学歴-----"
+    const background_1 ="クラーク記念国際高等学校 卒"
+    const background_2 ="明治大学 総合数理学部 卒 （位相幾何学）"
+    const background_3 =  "東京大学大学院 地球惑星科学専攻 （地震学）"
+    const skills_content_title = "-----使用言語など-----"
+    const skills_1 = "研究： Python Fortran C"
+    const skills_2 = "WEB： HTML CSS Javascript Typescript React/Next.js Vue3"
+    const skills_3 = "その他の言語(触ったことがある程度)： PHP Ruby Java"
+    const personal_content_title = "-----趣味-----"
+    const personal_1 = "チェス、数学、トレーニング"
+    const production__content_title = "-----制作物など-----"
+    const production_1 = "https://next-game-6q37.vercel.app/"
+    const production_2 = "https://gentle-quokka-bd2bd5.netlify.app"
+    const production_3 = "https://github.com/SKvr-46"
     return (
         <>
             <Meta pageTitle={"About Me"} pageDesc={"研究部屋αの管理人のページ"}/>
@@ -35,39 +36,44 @@ const About:NextPage = () => {
             <Container>
                 <Card 
                 title={"Background"} 
-                subtitle_1={background_1} 
+                content_title={background_content_title} 
+                subtitle_1={background_1}
                 subtitle_2={background_2}
                 subtitle_3={background_3}
-                subtitle_4={background_4}
                 backgroundcolor={"black"} 
                 color={"white"}/>
                 <Card 
                 title={"Skills"} 
+                content_title={skills_content_title} 
                 subtitle_1={skills_1}
                 subtitle_2={skills_2}
                 subtitle_3={skills_3}
-                subtitle_4={skills_4}
                 backgroundcolor={"purple"} 
                 color={"white"}/>
                 <Card 
                 title={"Personal"} 
+                content_title={personal_content_title} 
                 subtitle_1={personal_1} 
-                subtitle_2={personal_2} 
                 backgroundcolor={"#20b2aa"} 
                 color={"black"}/>
                 <Card 
                 title={"Production"} 
-                subtitle_1={production_1} 
-                subtitle_2={
-                <a href={production_2.toString()} target="_blank" rel="noopener noreferrer">
-                        {production_2.toString()}
+                content_title={production__content_title} 
+                subtitle_1={
+                <a href={production_1.toString()} target="_blank" rel="noopener noreferrer">
+                        Next.js/React: <br/> {production_1.toString()}
                 </a>
                 } 
-                subtitle_3={
-                <a href={production_3.toString()} target="_blank" rel="noopener noreferrer">
-                        {production_3.toString()}
+                subtitle_2={
+                <a href={production_2.toString()} target="_blank" rel="noopener noreferrer">
+                        Vue3: <br/>{production_2.toString()}
                 </a>
                 }
+                subtitle_3={
+                    <a href={production_3.toString()} target="_blank" rel="noopener noreferrer">
+                            Github: <br/>{production_3.toString()}
+                    </a>
+                    }
                 backgroundcolor={"#daa520"} 
                 color={"black"}/>
             </Container>

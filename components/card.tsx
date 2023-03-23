@@ -1,8 +1,9 @@
-import { ReactNode } from "react";
+import { ReactNode } from "react"
 import styles from "styles/card.module.scss"
 
 type CardPropstype = {
     title: string
+    content_title: string
     subtitle_1: ReactNode
     subtitle_2?: ReactNode
     subtitle_3?: ReactNode
@@ -15,6 +16,7 @@ type CardPropstype = {
 export const Card = (props:CardPropstype) => {
     const {
         title,
+        content_title,
         subtitle_1,
         subtitle_2,
         subtitle_3, 
@@ -31,6 +33,7 @@ export const Card = (props:CardPropstype) => {
             <div className={styles.outer} style={{background:backgroundcolor, color:color}}>
                 <div className={styles.title}>{title}</div>
                 <ul className={styles.subtitle}>
+                    <li>{content_title}</li>
                     <li>{subtitle_1}</li>
                     <li>{subtitle_2}</li>
                     <li>{subtitle_3}</li>
