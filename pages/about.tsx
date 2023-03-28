@@ -16,7 +16,7 @@ const About:NextPage = () => {
     const skills_content_title = "-----使用言語など-----"
     const skills_1 = "研究： Python Fortran C"
     const skills_2 = "WEB： HTML CSS Javascript Typescript React/Next.js Vue3"
-    const skills_3 = "その他の言語(触ったことがある程度)： PHP Ruby Java"
+    const skills_3 = "その他の言語(触ったことがある程度)： Go"
     const personal_content_title = "-----趣味-----"
     const personal_1 = "チェス、数学、トレーニング"
     const production__content_title = "-----制作物など-----"
