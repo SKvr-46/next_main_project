@@ -1,11 +1,11 @@
-import React from "react";
-import { Container } from "@/components/container";
-import { PageTopContent } from "@/components/pagetopcontent";
-import { HomeMidContents } from "@/components/homemidcontents";
-import { GearWrapper } from "@/components/gearwrapper";
+import React from "react"
+import { Container } from "@/components/container"
+import { PageTopContent } from "@/components/pagetopcontent"
+import { HomeMidContents } from "@/components/homemidcontents"
+import { GearWrapper } from "@/components/gearwrapper"
 import { GetStaticProps } from 'next'
-import { Meta } from "@/components/meta";
-import { NextPage } from "next";
+import { Meta } from "@/components/meta"
+import { NextPage } from "next"
 
 const Home:NextPage = () => {
 
