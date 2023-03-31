@@ -23,7 +23,6 @@ const About:NextPage = () => {
     const production_1 = "https://next-game-6q37.vercel.app/"
     const production_2 = "https://gentle-quokka-bd2bd5.netlify.app"
     const production_3 = "https://next-clock-sample-2o5b45q90-skvr-46.vercel.app/"
-    const production_4 = "https://github.com/SKvr-46"
     return (
         <>
             <Meta pageTitle={"About Me"} pageDesc={"研究部屋αの管理人のページ"}/>
@@ -83,14 +82,6 @@ const About:NextPage = () => {
                     className={styles.link}
                     >
                             Next.js/React: <br/>{production_3.toString()}
-                    </a>
-                    }
-                subtitle_4={
-                    <a 
-                    href={production_3.toString()} target="_blank" rel="noopener noreferrer"
-                    className={styles.link}
-                    >
-                            Github: <br/>{production_4.toString()}
                     </a>
                     }
                 backgroundcolor={"#daa520"} 

@@ -31,7 +31,7 @@ export const Card = (props:CardPropstype) => {
     return (
         <div className={styles.cardwrapper}>
             <div className={styles.outer} style={{background:backgroundcolor, color:color}}>
-                <div className={styles.title}>{title}</div>
+                <p className={styles.title}>{title}</p>
                 <ul className={styles.subtitle}>
                     <li>{content_title}</li>
                     <li>{subtitle_1}</li>
