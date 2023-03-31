@@ -22,7 +22,7 @@ const About:NextPage = () => {
     const production__content_title = "-----制作物など-----"
     const production_1 = "https://next-game-6q37.vercel.app/"
     const production_2 = "https://gentle-quokka-bd2bd5.netlify.app"
-    const production_3 = "https://next-clock-sample-2o5b45q90-skvr-46.vercel.app/"
+    const production_3 = "https://next-clock-sample.vercel.app"
     return (
         <>
             <Meta pageTitle={"About Me"} pageDesc={"研究部屋αの管理人のページ"}/>
