@@ -23,6 +23,7 @@ const About:NextPage = () => {
     const production_1 = "https://next-game-6q37.vercel.app/"
     const production_2 = "https://gentle-quokka-bd2bd5.netlify.app"
     const production_3 = "https://next-clock-sample.vercel.app"
+    const production_4 = "https://next-gpt-finddishes-git-main-skvr-46.vercel.app"
     return (
         <>
             <Meta pageTitle={"About Me"} pageDesc={"研究部屋αの管理人のページ"}/>
@@ -64,6 +65,7 @@ const About:NextPage = () => {
                 <a 
                 href={production_1.toString()} target="_blank" rel="noopener noreferrer"
                 className={styles.link}
+                style={{fontSize:"18px"}}
                 >
                         Next.js/React: <br/> {production_1.toString()}
                 </a>
@@ -72,6 +74,7 @@ const About:NextPage = () => {
                 <a 
                 href={production_2.toString()} target="_blank" rel="noopener noreferrer"
                 className={styles.link}
+                style={{fontSize:"18px"}}
                 >
                         Vue3: <br/>{production_2.toString()}
                 </a>
@@ -80,10 +83,20 @@ const About:NextPage = () => {
                     <a 
                     href={production_3.toString()} target="_blank" rel="noopener noreferrer"
                     className={styles.link}
+                    style={{fontSize:"18px"}}
                     >
                             Next.js/React: <br/>{production_3.toString()}
                     </a>
                     }
+                subtitle_4={
+                    <a 
+                    href={production_4.toString()} target="_blank" rel="noopener noreferrer"
+                    className={styles.link}
+                    style={{fontSize:"18px"}}
+                    >
+                            Next.js&OpenAI API: <br/>{production_4.toString()}
+                    </a>
+                    }                   
                 backgroundcolor={"#daa520"} 
                 color={"black"}/>
             </Container>
