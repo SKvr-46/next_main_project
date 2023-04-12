@@ -5,6 +5,11 @@
 .postcontainer {
     & .title {
         margin-top: var(--space-xs);
-    
+        font-size: var(--heading2);
+    }
+
+    & img {
+        width: 100%;
+        height: 100%;
     }
 }
