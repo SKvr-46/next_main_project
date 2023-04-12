@@ -35,7 +35,6 @@ export const BlogPage = ({blog} :{blog: BlogContentType}) => {
         </Container>
     )
 }
-
 export default BlogPage
 
 

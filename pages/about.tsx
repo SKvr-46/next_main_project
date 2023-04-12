@@ -18,7 +18,7 @@ const About:NextPage = () => {
     const skills_2 = "WEB： HTML CSS Javascript Typescript React/Next.js Vue3"
     const skills_3 = "その他の言語(触ったことがある程度)： Go"
     const personal_content_title = "-----趣味-----"
-    const personal_1 = "チェス、トレーニング、野鳥観察"
+    const personal_1 = "チェス、トレーニング、野鳥観察、数学"
     const production__content_title = "-----制作物など-----"
     const production_1 = "https://next-game-6q37.vercel.app/"
     const production_2 = "https://gentle-quokka-bd2bd5.netlify.app"
