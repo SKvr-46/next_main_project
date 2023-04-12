@@ -9,12 +9,22 @@ import { Meta } from "@/components/meta";
 
 //記事を表示するコンポーネント
 export const BlogPage = ({blog} :{blog: BlogContentType}) => {
+    const publishDate = new Date(blog.publishDate);
+    const formattedDate = publishDate.toLocaleString('ja-JP', {
+    timeZone: 'Asia/Tokyo',
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    });
+
     return (
         <Container>
             <Meta pageTitle={blog.title} pageDesc={"研究紹介のページ"}/>
             <div className={styles.postcontainer}>
                 <h1 className={styles.title}>{blog.title}</h1>
-                <h2 className={styles.publish}>{blog.publishDate}</h2>
+                <h2 className={styles.publish}>{formattedDate}</h2>
                 <div
                 dangerouslySetInnerHTML={{
                 __html: `${blog.content}`,
