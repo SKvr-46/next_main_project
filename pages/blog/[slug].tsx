@@ -8,7 +8,7 @@ import { Meta } from "@/components/meta";
 
 
 //記事を表示するコンポーネント
-export const BlogPage = ({blog} :{blog: BlogContentType}) => {
+export const BlogPage = ({ blog } :{ blog: BlogContentType }) => {
     const publishDate = new Date(blog.publishDate);
     const formattedDate = publishDate.toLocaleString('ja-JP', {
     timeZone: 'Asia/Tokyo',

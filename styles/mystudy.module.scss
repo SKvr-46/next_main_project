@@ -3,6 +3,7 @@
     flex-direction: column;
 
     & li {
+        padding: 1em 0;
         
         & a {
             font-size: var(--heading3);
@@ -30,7 +31,7 @@
                 bottom: 0;
                 left: 50%;
                 width: 0px;
-                height: 2px;
+                height: 3px;
                 background-color: var(--orange);
                 transition: 0.3s;
             }
@@ -44,7 +45,7 @@
                 bottom: 0;
                 right: 50%;
                 width: 0px;
-                height: 2px;
+                height: 3px;
                 background-color: var(--orange);
                 transition: 0.3s;
             }

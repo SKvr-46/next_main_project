@@ -1,4 +1,4 @@
-//ロゴ　コンポーネント
+//ロゴコンポーネント
 import styles from "styles/logo.module.scss"
 import Link from "next/link"
 

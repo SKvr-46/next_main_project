@@ -11,7 +11,7 @@ import { Accordion } from "@/components/accordion";
 import { GetStaticProps, NextPage } from "next";
 
 //My Studyのページ全体
-const MyStudy:NextPage<{post:BlogContentType[]}> = ({post}:{post:BlogContentType[]}) => {
+const MyStudy:NextPage<{post:BlogContentType[]}> = ({ post } : { post:BlogContentType[] }) => {
     return (
         <>
             <Meta pageTitle={"My Study"} pageDesc={"管理人の研究紹介のページ"}/>
@@ -20,7 +20,7 @@ const MyStudy:NextPage<{post:BlogContentType[]}> = ({post}:{post:BlogContentType
             title_2={"Introduction"}
             title_3={"Page"}
             >
-                <GearWrapper/>
+            <GearWrapper/>
             </PageTopContent>
             <Container>
             <Accordion/>
