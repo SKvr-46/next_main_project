@@ -105,7 +105,7 @@
 
             & .outer {
                 width: 100%;
-                height: calc(5 * var(--gear-radius));  //モバイルで幅が足りなくなったらここを変更
+                height: calc(4 * var(--gear-radius));  //モバイルで幅が足りなくなったらここを変更
                 border-radius: 0%;
 
                 & .title {

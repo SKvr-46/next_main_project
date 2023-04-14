@@ -99,15 +99,15 @@ const About:NextPage = () => {
                             Next.js&OpenAI API: <br/>{production_4.toString()}
                     </a>
                     }      
-                subtitle_5={
-                    <a 
-                    href={production_5.toString()} target="_blank" rel="noopener noreferrer"
-                    className={styles.link}
-                    style={{fontSize:"18px"}}
-                    >
-                            Next.js/React: <br/>{production_5.toString()}
-                    </a>
-                    }                                  
+                // subtitle_5={
+                //     <a 
+                //     href={production_5.toString()} target="_blank" rel="noopener noreferrer"
+                //     className={styles.link}
+                //     style={{fontSize:"18px"}}
+                //     >
+                //             Next.js/React: <br/>{production_5.toString()}
+                //     </a>
+                //     }                                  
                 backgroundcolor={"#daa520"} 
                 color={"black"}/>
             </Container>
