@@ -72,7 +72,7 @@
 
             &:hover {
                 width: 100%;
-                height: calc(3 * var(--gear-radius));
+                height: calc(3.5 * var(--gear-radius));
                 border-radius: 0%;
 
                 & .title {
@@ -105,7 +105,7 @@
 
             & .outer {
                 width: 100%;
-                height: calc(4 * var(--gear-radius));  //モバイルで幅が足りなくなったらここを変更
+                height: calc(5 * var(--gear-radius));  //モバイルで幅が足りなくなったらここを変更
                 border-radius: 0%;
 
                 & .title {

@@ -24,6 +24,8 @@ const About:NextPage = () => {
     const production_2 = "https://gentle-quokka-bd2bd5.netlify.app"
     const production_3 = "https://next-clock-sample.vercel.app"
     const production_4 = "https://next-gpt-finddishes-git-main-skvr-46.vercel.app"
+    const production_5 = "https://next-password-generator-git-main-skvr-46.vercel.app"
+
     return (
         <>
             <Meta pageTitle={"About Me"} pageDesc={"研究部屋αの管理人のページ"}/>
@@ -96,7 +98,16 @@ const About:NextPage = () => {
                     >
                             Next.js&OpenAI API: <br/>{production_4.toString()}
                     </a>
-                    }                   
+                    }      
+                subtitle_5={
+                    <a 
+                    href={production_5.toString()} target="_blank" rel="noopener noreferrer"
+                    className={styles.link}
+                    style={{fontSize:"18px"}}
+                    >
+                            Next.js/React: <br/>{production_5.toString()}
+                    </a>
+                    }                                  
                 backgroundcolor={"#daa520"} 
                 color={"black"}/>
             </Container>
