@@ -8,9 +8,10 @@ import { getAllPost } from "@/lib/api";
 import { BlogContentType } from "@/lib/api";
 import Link from "next/link";
 import { Accordion } from "@/components/accordion";
+import { GetStaticProps, NextPage } from "next";
 
 //My Studyのページ全体
-const MyStudy = ({post} :{post:BlogContentType[]}) => {
+const MyStudy:NextPage<{post:BlogContentType[]}> = ({post}:{post:BlogContentType[]}) => {
     return (
         <>
             <Meta pageTitle={"My Study"} pageDesc={"管理人の研究紹介のページ"}/>
@@ -41,9 +42,8 @@ const MyStudy = ({post} :{post:BlogContentType[]}) => {
 
 export default MyStudy
 
-
 //100個の記事を渡す
-export const getStaticProps = async () => {
+export const getStaticProps:GetStaticProps = async () => {
 
         const posts = await getAllPost()
         return {

@@ -50,8 +50,7 @@
         & .accordionbody {
             overflow: hidden;
             height: 0px;
-            padding-left: 1rem;
-            padding-right: 1rem;
+            padding: 0 1.5em;
             transition: all 0.4s ease-in-out;
         }
     }

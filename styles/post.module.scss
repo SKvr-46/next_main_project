@@ -18,7 +18,7 @@
         font-family: Monospace;
         background: rgba(128, 128, 128, 0.2);
         padding: 0.3em;
-        white-space: pre-wrap;
+        white-space: pre-wrap; //コードが長くなりすぎるのを防ぐための改行
         word-wrap: break-word;
     }
 }
