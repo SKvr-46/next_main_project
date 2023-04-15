@@ -26,11 +26,13 @@ export const Card = (props:CardPropstype) => {
         color 
         } = props
 
-
+        
         
     return (
         <div className={styles.cardwrapper}>
-            <div className={styles.outer} style={{background:backgroundcolor, color:color}}>
+            <div className={styles.outer}
+                style={{background:backgroundcolor, color:color}}
+                >
                 <p className={styles.title}>{title}</p>
                 <ul className={styles.subtitle}>
                     <li>{content_title}</li>

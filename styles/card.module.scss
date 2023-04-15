@@ -23,19 +23,18 @@
     .cardwrapper {
         display: grid;
         place-items: center;
-    
+
         & .outer {
             display: grid;
             place-items: center;
             position: relative;
-            margin: var(--space-xs) 0;
+            margin: var(--space-md) 0;
             height: calc(2.5 * var(--gear-radius));
             width: calc(2.5 * var(--gear-radius));
             border-radius: 100%;
             color: var(--white);
             transition: 0.4s;
             animation: 10s linear infinite shadow_style;
-            overflow: hidden;
     
             
     
@@ -54,7 +53,6 @@
                 font-weight: bold;
                 transform: scale(0);  
                 transition: 0.4s;
-                
 
                 & li {
                     margin-top: var(--space-xs);  //bottomだと、下のセレクタだ上を押す形になるので、上にズレる。
@@ -69,6 +67,7 @@
 
     @media (hover: hover) {
         .outer {
+            place-items: start center;
 
             &:hover {
                 width: 100%;
@@ -76,7 +75,6 @@
                 border-radius: 0%;
 
                 & .title {
-                    position: absolute;
                     font-weight: bold;
                     font-size: var(--heading1);
                     transition: 0.4s;
@@ -86,12 +84,15 @@
                 }
         
                 & .subtitle {
-                    position: absolute;
                     font-size: var(--heading2);
+                    padding: var(--space-md);
                     font-weight: 600;
                     transition: 0.4s;
                     transform: scale(1);
                     transition-delay: 0.2s;
+
+                    max-height: calc(3.5 * var(--gear-radius)); //親要素の高さ
+                    overflow-y: auto; //親要素より大きくなったらスクロール可能にする
                 }
             }
         }
@@ -105,22 +106,26 @@
 
             & .outer {
                 width: 100%;
-                height: calc(4 * var(--gear-radius));  //モバイルで幅が足りなくなったらここを変更
+                position: relative;
                 border-radius: 0%;
+                place-items: start center;
 
                 & .title {
                     position: absolute;
                     transform: scale(0);
-        
+                    
                 }
         
                 & .subtitle {
                     position: absolute;
                     font-size: var(--body);
                     padding: var(--space-md);
-                    font-weight: 800;
+                    font-weight: 600;
                     transition: 0.4s;
                     transform: scale(1);
+
+                    max-height: calc(2.5 * var(--gear-radius));
+                    overflow-y: auto;
                 }
             }
         }
