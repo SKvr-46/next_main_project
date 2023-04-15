@@ -86,7 +86,7 @@
                 & .subtitle {
                     font-size: var(--heading2);
                     padding: var(--space-md);
-                    font-weight: 600;
+                    font-weight: bold;
                     transition: 0.4s;
                     transform: scale(1);
                     transition-delay: 0.2s;
@@ -120,7 +120,7 @@
                     position: absolute;
                     font-size: var(--body);
                     padding: var(--space-md);
-                    font-weight: 600;
+                    font-weight: bold;
                     transition: 0.4s;
                     transform: scale(1);
 
