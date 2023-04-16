@@ -109,6 +109,8 @@
                 position: relative;
                 border-radius: 0%;
                 place-items: start center;
+                display: grid;
+                place-items: center;
 
                 & .title {
                     position: absolute;
@@ -119,7 +121,7 @@
                 & .subtitle {
                     position: absolute;
                     font-size: var(--body);
-                    padding: var(--space-md);
+                    padding:  0 var(--space-md);
                     font-weight: bold;
                     transition: 0.4s;
                     transform: scale(1);
