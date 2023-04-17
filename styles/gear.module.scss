@@ -238,6 +238,8 @@
             height: var(--gear-black-center);
             background-color: rgb(130, 52,3);
             border-radius: 100%;
+            border: 2px solid aquamarine;
+            filter: brightness(1.2);
             z-index: 3;
             opacity: 0.6;
         }
