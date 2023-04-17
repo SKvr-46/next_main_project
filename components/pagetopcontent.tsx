@@ -1,4 +1,4 @@
-//ページ最初の領域のコンポーネント　Welcome..などの部分
+//ページ最初の領域のコンポーネント Welcome..などの部分
 import styles from "styles/pagetopcontent.module.scss"
 
 type TopContentPropsType = {
