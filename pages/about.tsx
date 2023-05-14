@@ -9,22 +9,22 @@ import { GetStaticProps, NextPage } from "next";
 
 
 const About:NextPage = () => {
-    const background_content_title = "-----学歴-----"
-    const background_1 ="クラーク記念国際高等学校 卒"
-    const background_2 ="明治大学 総合数理学部 卒 （位相幾何学）"
-    const background_3 =  "東京大学大学院 地球惑星科学専攻 （地震学）"
-    const skills_content_title = "-----使用言語など-----"
-    const skills_1 = "研究： Python Fortran C"
-    const skills_2 = "WEB： HTML CSS Javascript Typescript React/Next.js Vue3"
-    const skills_3 = "その他の言語(触ったことがある程度)： Go"
-    const personal_content_title = "-----趣味-----"
-    const personal_1 = "チェス、トレーニング、野鳥観察、数学"
+    const background_content_title  = "-----学歴-----"
+    const background_1              = "クラーク記念国際高等学校 卒"
+    const background_2              = "明治大学 総合数理学部 卒 （位相幾何学）"
+    const background_3              = "東京大学大学院 地球惑星科学専攻 （地震学）"
+    const skills_content_title      = "-----使用言語など-----"
+    const skills_1                  = "研究： Python Fortran C"
+    const skills_2                  = "WEB： HTML CSS Javascript Typescript React/Next.js Vue3"
+    const skills_3                  = "その他の言語(触ったことがある程度)： Go"
+    const personal_content_title    = "-----趣味-----"
+    const personal_1                = "チェス、トレーニング、野鳥観察、数学"
     const production__content_title = "-----制作物など-----"
-    const production_1 = "https://next-game-6q37.vercel.app/"
-    const production_2 = "https://gentle-quokka-bd2bd5.netlify.app"
-    const production_3 = "https://next-clock-sample.vercel.app"
-    const production_4 = "https://next-gpt-finddishes-git-main-skvr-46.vercel.app"
-    const production_5 = "https://next-password-generator-git-main-skvr-46.vercel.app"
+    const production_1              = "https://next-game-6q37.vercel.app/"
+    const production_2              = "https://gentle-quokka-bd2bd5.netlify.app"
+    const production_3              = "https://next-clock-sample.vercel.app"
+    const production_4              = "https://next-gpt-finddishes-git-main-skvr-46.vercel.app"
+    const production_5              = "https://next-password-generator-git-main-skvr-46.vercel.app"
 
     return (
         <>
