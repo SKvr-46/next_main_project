@@ -25,6 +25,8 @@ const About:NextPage = () => {
     const production_3              = "https://next-clock-sample.vercel.app"
     const production_4              = "https://next-gpt-finddishes-git-main-skvr-46.vercel.app"
     const production_5              = "https://next-password-generator-git-main-skvr-46.vercel.app"
+    const Publications_title        = "-----出版物-----"
+    const publications_1            = "https://www.amazon.co.jp/Theoretical-Chess-Puzzles-English-K-ebook/dp/B0B66S2P8L/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1695650388&sr=8-2"
 
     return (
         <>
@@ -109,6 +111,20 @@ const About:NextPage = () => {
                     </a>
                     }                                  
                 backgroundcolor={"#daa520"} 
+                color={"black"}/>
+                <Card 
+                title={"Publications"} 
+                content_title={Publications_title} 
+                subtitle_1={
+                    <a 
+                    href={publications_1.toString()} target="_blank" rel="noopener noreferrer"
+                    className={styles.link}
+                    style={{fontSize:"18px"}}
+                    >
+                            Theoretical Chess Puzzles (English Edition)
+                    </a>
+                }
+                backgroundcolor={"#66CC66"} 
                 color={"black"}/>
             </Container>
         </>
