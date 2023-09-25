@@ -63,7 +63,7 @@ const About:NextPage = () => {
                 backgroundcolor={"#20b2aa"} 
                 color={"black"}/>
                 <Card 
-                title={"Production"} 
+                title={"Productions"} 
                 content_title={production__content_title} 
                 subtitle_1={
                 <a 
